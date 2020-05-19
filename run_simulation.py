@@ -24,6 +24,13 @@ _log = logging.getLogger(__name__)
 #                            "Line_name": "_E407CBB6-8C8D-9BC9-589C-AB83FBF0826D"
 #                        },
 
+# ieee13nodeckt
+# "power_system_config": {
+#                            "GeographicalRegion_name": "_73C512BD-7249-4F50-50DA-D93849B89C43",
+#                            "SubGeographicalRegion_name": "_ABEB635F-729D-24BF-B8A4-E2EF268D8B9E",
+#                            "Line_name": "_49AD8E07-3BF9-A4E2-CB8F-C3722F837B62"
+#                        },
+
 # 8500-based model
 # {"power_system_config": {
 #     "GeographicalRegion_name":"_73C512BD-7249-4F50-50DA-D93849B89C43",
@@ -34,26 +41,27 @@ _log = logging.getLogger(__name__)
 run_config = {
     "power_system_config": {
         # 9500 node system
-        # "Line_name": "_AAE94E4A-2465-6F5E-37B1-3E72183A4E44",
+        #"Line_name": "_AAE94E4A-2465-6F5E-37B1-3E72183A4E44",
 
         # 8500 node system
-        # "Line_name": "_4F76A5F9-271D-9EB8-5E31-AA362D86F2C3",
+        #"Line_name": "_4F76A5F9-271D-9EB8-5E31-AA362D86F2C3",
         # 123 node
         # "Line_name": "_C1C3E687-6FFD-C753-582B-632A27E28507"
 
         # 123 PV node
-        "Line_name": "_E407CBB6-8C8D-9BC9-589C-AB83FBF0826D"
-
+        #"Line_name": "_E407CBB6-8C8D-9BC9-589C-AB83FBF0826D"
+        #ieee13nodeckt
+        "Line_name": "_49AD8E07-3BF9-A4E2-CB8F-C3722F837B62"
         # "GeographicalRegion_name": "_73C512BD-7249-4F50-50DA-D93849B89C43",
         # "SubGeographicalRegion_name": "_1CD7D2EE-3C91-3248-5662-A43EFEFAC224",
         # "Line_name": "_C1C3E687-6FFD-C753-582B-632A27E28507"
     },
     "application_config": {
-        "applications": [] #{"name": "sample_app", "config_string": ""}]
+        "applications": [ {"name": "dnp3_app", "config_string": ""}]
     },
     "simulation_config": {
         "start_time": "1562453292",
-        "duration": "10",
+        "duration": "500",
         "simulator": "GridLAB-D",
         "timestep_frequency": "1000",
         "timestep_increment": "1000",
@@ -72,7 +80,7 @@ run_config = {
     },
     "test_config": {
         "events": [],
-        "appId": "sample_app" #"#"_C1C3E687-6FFD-C753-582B-632A27E28507"
+        "appId": "dnp3_app" #"#"_C1C3E687-6FFD-C753-582B-632A27E28507"
     }
 }
 
